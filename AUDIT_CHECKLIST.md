@@ -46,6 +46,8 @@ specification. Dates refer to the audit that produced this file.
 - [x] README environment pins match `lean-toolchain`, `lakefile.toml`,
   and `lake-manifest.json`
 - [x] README architecture list matches the files in the repository
+- [x] `NamedTheorems.lean` records Rolle, Lagrange MVT, and Cauchy MVT
+  as reconstructed arguments, with matching CASE_INDEX rows A09–A12 and I21
 - [x] README does not claim a green CI badge before the workflow has
   run on GitHub
 

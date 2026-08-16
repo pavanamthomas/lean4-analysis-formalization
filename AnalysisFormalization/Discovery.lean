@@ -42,6 +42,10 @@ open Filter Set Topology
 #check hasDerivAt_id
 #check hasDerivAt_pow
 #check Real.hasDerivAt_exp
+#check IsLocalExtr.hasDerivAt_eq_zero
+#check exists_hasDerivAt_eq_zero
+#check exists_hasDerivAt_eq_slope
+#check exists_ratio_hasDerivAt_eq_ratio_slope
 #check tendsto_atTop_ciSup
 #check closure_Ioo
 #check interior_Icc

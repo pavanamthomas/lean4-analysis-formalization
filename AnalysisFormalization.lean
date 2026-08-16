@@ -6,6 +6,7 @@ import AnalysisFormalization.Continuity
 import AnalysisFormalization.Topology
 import AnalysisFormalization.Compactness
 import AnalysisFormalization.Calculus
+import AnalysisFormalization.NamedTheorems
 import AnalysisFormalization.OrderBounds
 import AnalysisFormalization.ReviewerCases
 import AnalysisFormalization.Discovery

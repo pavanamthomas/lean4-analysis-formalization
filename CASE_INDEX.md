@@ -43,6 +43,11 @@ Difficulty: **F** foundational, **I** intermediate, **A** advanced.
 | I15 | Derivative of `x^2` | `hasDerivAt_pow` | none | `n * x^n` instead of `n * x^(n-1)` | I | `Calculus.lean` / `hasDerivAt_sq` |
 | I17 | Derivative of `exp` | `Real.hasDerivAt_exp` | none | mixing `Real.exp` and `Complex.exp` | I | `Calculus.lean` / `hasDerivAt_exp_real` |
 | A06 | Product rule `x e^x` | `HasDerivAt.mul` | none | product rule as `f' * g'` | A | `Calculus.lean` / `hasDerivAt_mul_id_exp` |
+| A09 | Interior extremum, equal ends | `IsCompact.exists_isMinOn`, `Icc_mem_nhds` | `a < b`, `f a = f b`, `ContinuousOn` | EVT on `Ioo a b`; extremum without equal ends | A | `NamedTheorems.lean` / `exists_isLocalExtr_of_eq_ends` |
+| A10 | Rolle's theorem | `IsLocalExtr.hasDerivAt_eq_zero` | `a < b`, `ContinuousOn` on `Icc`, `HasDerivAt` on `Ioo`, `f a = f b` | omitting `f a = f b`; `deriv` junk value | A | `NamedTheorems.lean` / `rolle` |
+| A11 | Lagrange mean value theorem | Rolle plus affine correction | `a < b`, `ContinuousOn` on `Icc`, `HasDerivAt` on `Ioo` | dividing by `b - a` at `a = b` | A | `NamedTheorems.lean` / `lagrange_mean_value` |
+| A12 | Cauchy mean value theorem | Rolle on `f Δg - g Δf` | same as Lagrange, on two maps | quotient form without `g' c ≠ 0` | A | `NamedTheorems.lean` / `cauchy_mean_value` |
+| I21 | MVT for `x^2` | `lagrange_mean_value`, `hasDerivAt_pow` | `a < b` | collapsing the slope without naming `c` | I | `NamedTheorems.lean` / `mean_value_sq` |
 | F11 | LUB of `(-∞, a]` | `isLUB_Iic` | none | `IsGLB (Iic a) a` | F | `OrderBounds.lean` / `isLUB_Iic_real` |
 | I18 | Translation strictly monotone | `StrictMono` | none | claiming `c - x` is increasing | I | `OrderBounds.lean` / `strictMono_add_const` |
 | I19 | Maximum of `[a, b]` | `isGreatest_Icc` | `a ≤ b` | `IsGreatest (Ioo a b) b` | I | `OrderBounds.lean` / `isGreatest_Icc_real` |
@@ -64,9 +69,9 @@ Difficulty: **F** foundational, **I** intermediate, **A** advanced.
 | Difficulty | Cases |
 | --- | ---: |
 | Foundational | 13 |
-| Intermediate | 24 |
-| Advanced | 14 |
-| **Total** | **51** |
+| Intermediate | 25 |
+| Advanced | 18 |
+| **Total** | **56** |
 
 | Topic | Cases |
 | --- | ---: |
@@ -76,7 +81,7 @@ Difficulty: **F** foundational, **I** intermediate, **A** advanced.
 | Continuity | 5 |
 | Topology | 6 |
 | Compactness | 4 |
-| Calculus | 4 |
+| Calculus | 9 |
 | Order / bounds | 4 |
 | Reviewer / faithfulness | 10 |
 | Discovery | 1 |

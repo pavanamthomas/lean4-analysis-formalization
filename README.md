@@ -24,6 +24,7 @@ Covered topics:
 - open and closed sets, interiors, closures, neighborhoods
 - compactness, continuous images, extrema, Heine–Borel on `ℝ`
 - elementary derivatives
+- Rolle, Lagrange's mean value theorem, and Cauchy's mean value theorem
 - order bounds and monotone convergence
 
 The project does not develop a new analysis library. It specializes
@@ -56,6 +57,7 @@ AnalysisFormalization/
   Topology.lean                     open, closed, interior, closure
   Compactness.lean                  IsCompact, EVT, Heine–Borel
   Calculus.lean                     HasDerivAt examples
+  NamedTheorems.lean                Rolle, Lagrange MVT, Cauchy MVT
   OrderBounds.lean                  LUB, maxima, monotone convergence
   ReviewerCases.lean                defective-candidate repairs
   Discovery.lean                    #check of the reused mathlib APIs
@@ -140,8 +142,10 @@ Difficulty labels:
   them. That is intentional; the corresponding CASE_INDEX rows say so.
 - Suprema appear only for intervals and monotone sequences, where the
   mathlib statement is a direct match.
-- Derivatives are limited to `id`, `x^2`, `exp`, and the product
-  `x * exp x`.
+- Elementary derivative examples remain `id`, `x^2`, `exp`, and
+  `x * exp x`. Rolle and the mean value theorems are proved in
+  `NamedTheorems.lean` from EVT and Fermat's interior-extremum
+  lemma, not by quoting the mathlib one-liners.
 - `#check` in `Discovery.lean` emits info lines during `lake build`.
 - CI status on GitHub is not known until the workflow has run on the
   default branch or a pull request.

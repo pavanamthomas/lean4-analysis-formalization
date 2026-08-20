@@ -143,8 +143,8 @@ Difficulty labels:
 - Derivatives are limited to `id`, `x^2`, `exp`, and the product
   `x * exp x`.
 - `#check` in `Discovery.lean` emits info lines during `lake build`.
-- CI status on GitHub is not known until the workflow has run on the
-  default branch or a pull request.
+- CI on `main` runs the placeholder check and `leanprover/lean-action@v1` with
+  `build: true` and the mathlib cache. `nanoda` is not enabled.
 
 ## Reproducibility
 
